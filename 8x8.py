@@ -1,15 +1,29 @@
 import numpy as np
 from ant_colony import AntColony
 
-dist = np.array([[np.inf, 40 , 69 , 23 , np.inf, 65 , np.inf, np.inf],
-                 [40 , np.inf, 46 , np.inf, np.inf, np.inf, np.inf, np.inf],
-                 [69 , 46 , np.inf, np.inf, np.inf, 100, np.inf, np.inf],
-                 [23 , np.inf, np.inf, np.inf, 42 , 75 , np.inf, np.inf],
-                 [np.inf, np.inf, np.inf, 42 , np.inf, np.inf, np.inf, 399],
-                 [65 , np.inf, 100, 75 , np.inf, np.inf, 76 , np.inf],
-                 [np.inf, np.inf, np.inf, np.inf, np.inf, 76 , np.inf, 386],
-                 [np.inf, np.inf, np.inf, np.inf, 399, np.inf, 386, np.inf]])
+# dist = np.array(
+#     [
+#         [99999, 5, 7, 3, 99999],
+#         [5, 99999, 4, 99999, 99999],
+#         [7, 4, 99999, 99999, 5],
+#         [3, 99999, 99999, 99999, 4],
+#         [99999, 99999, 5, 4, 99999],
+#     ]
+# )
 
-ant_colony = AntColony(dist, 10, 20, 100, 0.5, alpha=0.1, beta=1)
+dist = np.array(
+    [
+        [99999, 40, 69, 23, 99999, 65, 99999, 99999],
+        [40, 99999, 46, 99999, 99999, 99999, 99999, 99999],
+        [69, 46, 99999, 99999, 99999, 100, 99999, 99999],
+        [23, 99999, 99999, 99999, 42, 75, 99999, 99999],
+        [99999, 99999, 99999, 42, 99999, 99999, 99999, 399],
+        [65, 99999, 100, 75, 99999, 99999, 76, 99999],
+        [99999, 99999, 99999, 99999, 99999, 76, 99999, 386],
+        [99999, 99999, 99999, 99999, 399, 99999, 386, 99999],
+    ]
+)
+
+ant_colony = AntColony(dist, 10, 20, 100, 0.98, alpha=0.5, beta=1)
 shortest_path = ant_colony.run()
-print ("shorted_path: {}".format(shortest_path))
+print("shorted_path: {}".format(shortest_path))

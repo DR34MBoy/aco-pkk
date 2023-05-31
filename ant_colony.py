@@ -29,6 +29,7 @@ class AntColony(object):
         self.beta = beta
 
     def run(self):
+        print("pheromone awal:", self.pheromone)
         shortest_path = None
         all_time_shortest_path = ("placeholder", np.inf)
         for i in range(self.n_iterations):
@@ -86,6 +87,8 @@ class AntColony(object):
             print(row)
             print(row.sum())
             print(norm_row)
+            print(dist)
+            exit(1)
         return move
 
 
