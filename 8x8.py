@@ -37,7 +37,7 @@ dist = np.array(
 #     ]
 # )
 
-ant_colony = AntColony(dist, 5, 3, 10, 0.95, alpha=1, beta=2)
+ant_colony = AntColony(dist, 5, 0, 10, 0.95, alpha=1, beta=2)
 # ant_colony = AntColony(dist, 3, 0, 10, 0.95, alpha=1, beta=2)
 shortest_path = ant_colony.run()
 print("shorted_path: {}".format(shortest_path))
