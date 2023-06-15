@@ -57,7 +57,7 @@ class AntColony(object):
     def gen_all_paths(self):
         all_paths = []
         for i in range(self.n_ants):
-            path = self.gen_path(0)
+            path = self.gen_path(3)
             all_paths.append((path, self.gen_path_dist(path)))
         return all_paths
 
